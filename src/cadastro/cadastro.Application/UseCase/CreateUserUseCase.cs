@@ -13,9 +13,10 @@ public class CreateUserUseCase : ICreateUser
     private readonly IMensageria _mensageria;
     private readonly UserEventFactory _userEvent;
 
-    public CreateUserUseCase(IMensageria mensageria)
+    public CreateUserUseCase(IMensageria mensageria, UserEventFactory userEvent)
     {
         _mensageria = mensageria;
+        _userEvent = userEvent;
     }
 
     public async Task<User> CreateUser(CriarUserDTO userDTO)
