@@ -1,0 +1,1 @@
+namespace cadastro.Infrastructure.Persistence;

@@ -6,9 +6,12 @@ using cadastro.Infrastructure.Messaging;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+
 builder.Services.AddScoped<ICreateUser, CreateUserUseCase>();
-builder.Services.AddScoped<IMensageria, RabbitMqPublisher>();
 builder.Services.AddScoped<UserEventFactory>();
+
+builder.Services.AddSingleton<IMensageria, RabbitMqPublisher>();
+
 
 var app = builder.Build();
 
