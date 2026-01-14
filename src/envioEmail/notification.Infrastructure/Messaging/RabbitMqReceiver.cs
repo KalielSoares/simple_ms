@@ -1,11 +1,10 @@
-using cadastro.Application.Interfaces;
 using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
 using System.Text;
 
 namespace cadastro.Infrastructure.Messaging;
 
-public class RabbitMqPublisher : IMensageria
+public class RabbitMqReceiver : IMensageria
 {
 
     public ConnectionFactory _factory;
@@ -22,7 +21,7 @@ public class RabbitMqPublisher : IMensageria
         };
     }
 
-    public async Task Send(string message)
+    public async Task Recieve(string message)
     {
      
         using var connection = await _factory.CreateConnectionAsync();

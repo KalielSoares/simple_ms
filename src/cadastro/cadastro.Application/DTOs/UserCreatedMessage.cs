@@ -7,7 +7,7 @@ public class UserCreatedMessage
     public string Name { get; set; }
     public string Email { get; set; }
 
-    public DateTime createdAt { get; set; }
+    public string createdAt { get; set; }
 
     public UserCreatedMessage(string userid,string name, string email)
     {
@@ -15,6 +15,6 @@ public class UserCreatedMessage
         userId = userid;
         Name = name;
         Email = email;
-        createdAt = DateTime.Now;   
+        createdAt = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");;   
     }
 }
