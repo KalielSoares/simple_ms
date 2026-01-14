@@ -15,6 +15,6 @@ public class UserCreatedMessage
         userId = userid;
         Name = name;
         Email = email;
-        createdAt = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");;   
+        createdAt = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
     }
 }

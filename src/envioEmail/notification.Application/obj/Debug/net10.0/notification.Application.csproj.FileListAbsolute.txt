@@ -1,0 +1,16 @@
+C:\Dev\.NET\src\envioEmail\notification.Application\bin\Debug\net10.0\notification.Application.deps.json
+C:\Dev\.NET\src\envioEmail\notification.Application\bin\Debug\net10.0\notification.Application.dll
+C:\Dev\.NET\src\envioEmail\notification.Application\bin\Debug\net10.0\notification.Application.pdb
+C:\Dev\.NET\src\envioEmail\notification.Application\bin\Debug\net10.0\notification.Domain.dll
+C:\Dev\.NET\src\envioEmail\notification.Application\bin\Debug\net10.0\notification.Domain.pdb
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.csproj.AssemblyReference.cache
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.AssemblyInfoInputs.cache
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.AssemblyInfo.cs
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.csproj.CoreCompileInputs.cache
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.sourcelink.json
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notifica.B63C9C55.Up2Date
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.dll
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\refint\notification.Application.dll
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\notification.Application.pdb
+C:\Dev\.NET\src\envioEmail\notification.Application\obj\Debug\net10.0\ref\notification.Application.dll

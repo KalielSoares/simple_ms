@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "notification.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/notification.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/notification.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "notification.Domain/1.0.0": {
+      "type": "project",
+      "path": "../notification.Domain/notification.Domain.csproj",
+      "msbuildProject": "../notification.Domain/notification.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "notification.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Kali\\.nuget\\packages\\": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Dev\\.NET\\src\\envioEmail\\notification.Domain\\notification.Domain.csproj": {
+              "projectPath": "C:\\Dev\\.NET\\src\\envioEmail\\notification.Domain\\notification.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

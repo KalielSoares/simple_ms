@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notification.API", "notification.API\notification.API.csproj", "{3784FAAA-6F07-458B-8F40-3C1C92049856}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notification.Application", "notification.Application\notification.Application.csproj", "{9269933B-8BE2-4C2F-A93A-3201F090E3C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notification.Domain", "notification.Domain\notification.Domain.csproj", "{696FA471-778A-41A0-B5E4-BC5776A20306}"
