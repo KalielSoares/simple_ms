@@ -1,0 +1,24 @@
+﻿# IDEs
+.idea/
+.vs/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+out/
+
+# .NET
+*.AssemblyAttributes.cs
+*.csproj.user
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env

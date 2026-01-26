@@ -11,7 +11,6 @@ public class UserEventFactory
      
         var userEvent = new UserCreatedMessage
         (
-            userA.userId,
             userA.Name.Value,
             userA.Email.Value
         );

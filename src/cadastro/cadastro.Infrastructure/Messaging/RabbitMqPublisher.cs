@@ -23,23 +23,29 @@ public class RabbitMqPublisher : IMensageria
     }
 
     public async Task Send(string message)
-    {
-     
-        using var connection = await _factory.CreateConnectionAsync();
-        using var channel = await connection.CreateChannelAsync();
+{
+    using var connection = await _factory.CreateConnectionAsync();
+    using var channel = await connection.CreateChannelAsync();
 
-        await channel.QueueDeclareAsync(queue: "usuario-cadastrado", 
-                                        durable: true, 
-                                        exclusive: false, 
-                                        autoDelete: false,
-                                        arguments: null);
-        
-        var body = Encoding.UTF8.GetBytes(message);
+    // 1. Declara a Exchange
+    await channel.ExchangeDeclareAsync(exchange: "usuarios.exchange", type: ExchangeType.Direct);
 
-        await channel.BasicPublishAsync(exchange: "usuarios.exchange",
-                                        routingKey:"usuario-cadastrado",
-                                        body: body);
-        
-    }
+    // 2. Declara a Fila
+    await channel.QueueDeclareAsync(queue: "usuario-cadastrado", 
+                                    durable: true, 
+                                    exclusive: false, 
+                                    autoDelete: false);
+    
+    // 3. FAZ O BIND (Obrigatório para a Exchange entregar na Fila)
+    await channel.QueueBindAsync(queue: "usuario-cadastrado", 
+                                 exchange: "usuarios.exchange", 
+                                 routingKey: "usuario-cadastrado");
+
+    var body = Encoding.UTF8.GetBytes(message);
+
+    await channel.BasicPublishAsync(exchange: "usuarios.exchange",
+                                    routingKey: "usuario-cadastrado",
+                                    body: body);
+}
 
 }

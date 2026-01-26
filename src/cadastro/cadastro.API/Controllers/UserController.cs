@@ -17,7 +17,7 @@ public class UserController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Criar([FromBody]CriarUserDTO userDTO)
     {
-        var userId = await _createUserUseCase.CreateUser(userDTO);
-        return CreatedAtAction(nameof(Criar), userDTO);
+        await _createUserUseCase.CreateUser(userDTO);
+        return Created();
     }
 }
