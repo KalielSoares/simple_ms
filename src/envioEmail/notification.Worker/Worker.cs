@@ -49,10 +49,8 @@ public class Worker(IConfiguration configuration, IServiceProvider serviceProvid
         var consumer = new AsyncEventingBasicConsumer(_channel);
         consumer.ReceivedAsync += async (model, ea) =>
         {
-            // Criamos um escopo manual para usar o MySQL dentro do Worker
             using (var scope = serviceProvider.CreateScope())
             {
-                // Chame o UseCase, não o Repository
                 var useCase = scope.ServiceProvider.GetRequiredService<CreateUserUseCase>();
     
                 try 
@@ -63,17 +61,13 @@ public class Worker(IConfiguration configuration, IServiceProvider serviceProvid
 
                     if (userDto != null)
                     {
-                        // O UseCase já faz o mapeamento para a Entidade e salva
                         await useCase.Execute(userDto);
             
                         await _channel.BasicAckAsync(ea.DeliveryTag, false);
-                        Console.WriteLine($"[Sucesso] Usuário {userDto.Name} processado.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Erro ao processar: {ex.Message}");
-                    // Re-envia para a fila em caso de erro (opcional)
                     await _channel.BasicNackAsync(ea.DeliveryTag, false, requeue: true);
                 }
             }
