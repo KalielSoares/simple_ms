@@ -14,10 +14,7 @@ public class UserEventFactory
             userA.Name.Value,
             userA.Email.Value
         );
-
-
-
+        
         return userEvent;
-
     }
 }
